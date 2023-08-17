@@ -4,6 +4,8 @@ import App from "./App.tsx";
 import "./index.css";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./utils/queryClient.tsx";
+import "@fontsource/inter";
+import "@fontsource/inter/800.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

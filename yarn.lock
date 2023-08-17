@@ -1234,10 +1234,20 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.47.0.tgz#5478fdf443ff8158f9de171c704ae45308696c7d"
   integrity sha512-P6omY1zv5MItm93kLM8s2vr1HICJH8v0dvddDhysbIuZ+vcjOHg5Zbkf1mTkcmi2JA9oBG2anOkRnW8WJTS8Og==
 
+"@fontsource/inter@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.0.8.tgz#61b50cb0eb72b14ae1938d47c4a9a91546d2a50c"
+  integrity sha512-28knWH1BfOiRalfLs90U4sge5mpQ8ZH6FS0PTT+IZMKrZ7wNHDHRuKa1kQJg+uHcc6axBppnxll+HXM4c7zo/Q==
+
 "@fontsource/open-sans@^5.0.9":
   version "5.0.9"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.9.tgz#e5d6216cd32f3489940f5348945b11c65191d5a6"
   integrity sha512-u3P37qsYLuYTkQjevTInS8cwvhZznS08jauNkbzzyFBLSLogEdHqLmP/PyE8Bnrff+hVguA5WwtWThiy1m4Eaw==
+
+"@fontsource/roboto-mono@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-mono/-/roboto-mono-5.0.8.tgz#9b3df61f884f46e12d3eca46e75517fde58da68e"
+  integrity sha512-vjnNX8zQCSp4HadUJ3gpZiizCsK/ROjgGMpd4bcRxuyiTNGGMaznmKbhqdyVeFVap1sX8h2Qu380awaotey/mQ==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"

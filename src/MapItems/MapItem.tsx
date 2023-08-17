@@ -41,18 +41,6 @@ const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
       }}
     >
       <StyledMapItem selected={selected} background={stringToPastelColor(property.listing_brokers[0])}>{chooseEmoji()}</StyledMapItem>
-      {/* {selected === property.apn && (
-              <div style={{position: 'absolute', bottom: '50px', backgroundColor: "white" }}>heloo there</div>
-              // <Popup
-              //   key={property.apn + "p"}
-              //   latitude={property.latitude}
-              //   longitude={property.longitude}
-              //   // offset={}
-              //   onOpen={(e) => console.log(e)}
-              // >
-
-              // </Popup>
-            )} */}
     </Marker>
   );
 };

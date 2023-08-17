@@ -11,6 +11,7 @@ function App() {
 
   return (
     <StyledApp>
+      <h1>LandGrab Watch 😡</h1>
       <Map
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         mapLib={import("mapbox-gl")}
