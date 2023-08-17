@@ -37,6 +37,15 @@ export const StyledDrawer = styled.div<{
     }
   }
 
+  h3 {
+    font-size: 25px;
+  }
+
+  .history {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
   @media (min-width: 800px) {
     width: 670px;
     right: ${({ $isOpen }) => ($isOpen ? "0px" : "-670px")};
