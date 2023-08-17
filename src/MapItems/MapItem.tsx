@@ -4,6 +4,7 @@ import { Property } from "../types/Property";
 import { StyledMapItem } from "./MapItem.styled";
 import { stringToPastelColor } from "../utils/colorMappings";
 import { useDrawerStore } from "../stores/drawerStore";
+import { chooseEmoji } from "../utils/chooseEmoji";
 
 type Props = {
   selected: boolean;
@@ -12,26 +13,7 @@ type Props = {
 };
 
 const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
-  const selectProperty = useDrawerStore((state) => state.selectProperty)
-
-  const chooseEmoji = () => {
-    switch (property.events[0].description) {
-      case "Contingent":
-        return "🤝";
-      case "Listed":
-        return "📝";
-      case "Listing Removed":
-        return "✋";
-      case "Price Changed":
-        return "📉";
-      case "Relisted":
-        return "🧲";
-      case "Sold":
-        return "💰";
-      default:
-        return "😡";
-    }
-  };
+  const selectProperty = useDrawerStore((state) => state.selectProperty);
 
   return (
     <Marker
@@ -41,10 +23,15 @@ const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
       onClick={() => {
         console.log(property.apn, property.address);
         setSelected(property.apn + property.address);
-        selectProperty(property)
+        selectProperty(property);
       }}
     >
-      <StyledMapItem selected={selected} background={stringToPastelColor(property.listing_brokers[0])}>{chooseEmoji()}</StyledMapItem>
+      <StyledMapItem
+        selected={selected}
+        background={stringToPastelColor(property.listing_brokers[0])}
+      >
+        {chooseEmoji(property.events[0].description)}
+      </StyledMapItem>
     </Marker>
   );
 };
