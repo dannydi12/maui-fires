@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { Property } from "./Property";
-import MapItem from "./MapItem";
-import { listOfBrokers } from "./utils/buildListOfBrokers";
+import { Property } from "../types/Property";
+import MapItem from "../MapItem/MapItem";
+import { listOfBrokers } from "../utils/buildListOfBrokers";
 
 type Props = {
   properties: Property[];

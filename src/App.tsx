@@ -1,8 +1,8 @@
-import { Property } from "./Property";
+import { Property } from "./types/Property";
 import Map from "react-map-gl";
 import { StyledApp } from "./App.styled";
 import { useQuery } from "@tanstack/react-query";
-import MapItems from "./MapItems";
+import MapItems from "./MapItems/MapItems";
 
 function App() {
   const { data } = useQuery<any, unknown, Property[], any>({

@@ -1,4 +1,4 @@
-import { Property } from "../Property";
+import { Property } from "../types/Property";
 
 export const listOfBrokers = (properties: Property[]) => {
   const keys = {} as any;

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Marker } from "react-map-gl";
-import { Property } from "./Property";
+import { Property } from "../types/Property";
 import { StyledMapItem } from "./MapItem.styled";
-import { stringToPastelColor } from "./utils/colorMappings";
+import { stringToPastelColor } from "../utils/colorMappings";
 
 type Props = {
   selected: boolean;
