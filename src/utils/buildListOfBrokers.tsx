@@ -1,6 +1,6 @@
-import { Data } from "../Data";
+import { Property } from "../Property";
 
-export const listOfBrokers = (properties: Data[]) => {
+export const listOfBrokers = (properties: Property[]) => {
   const keys = {} as any;
   const brokers = [] as string[];
 

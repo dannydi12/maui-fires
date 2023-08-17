@@ -1,13 +1,18 @@
 import { FC, useState } from "react";
-import { Data } from "./Data";
+import { Property } from "./Property";
 import MapItem from "./MapItem";
+import { listOfBrokers } from "./utils/buildListOfBrokers";
 
 type Props = {
-  properties: Data[];
+  properties: Property[];
 };
 
 const MapItems: FC<Props> = ({ properties }) => {
   const [selected, setSelected] = useState("");
+
+  
+
+  console.log(listOfBrokers(properties));
 
   return (
     <>

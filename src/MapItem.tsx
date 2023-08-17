@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { Marker } from "react-map-gl";
-import { Data } from "./Data";
+import { Property } from "./Property";
 import { StyledMapItem } from "./MapItem.styled";
+import { stringToPastelColor } from "./utils/colorMappings";
 
 type Props = {
   selected: boolean;
-  property: Data;
+  property: Property;
   setSelected: (input: string) => void;
 };
 
@@ -39,7 +40,7 @@ const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
         setSelected(property.apn + property.address);
       }}
     >
-      <StyledMapItem selected={selected}>{chooseEmoji()}</StyledMapItem>
+      <StyledMapItem selected={selected} background={stringToPastelColor(property.listing_brokers[0])}>{chooseEmoji()}</StyledMapItem>
       {/* {selected === property.apn && (
               <div style={{position: 'absolute', bottom: '50px', backgroundColor: "white" }}>heloo there</div>
               // <Popup
