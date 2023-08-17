@@ -24,8 +24,8 @@ const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
         return "🧲";
       case "Sold":
         return "💰";
-        default:
-          return '😡'
+      default:
+        return "😡";
     }
   };
 
@@ -35,8 +35,8 @@ const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
       longitude={property.longitude}
       style={{ cursor: "pointer" }}
       onClick={() => {
-        console.log(property.apn,  property.address)
-        setSelected(property.apn + property.address)
+        console.log(property.apn, property.address);
+        setSelected(property.apn + property.address);
       }}
     >
       <StyledMapItem selected={selected}>{chooseEmoji()}</StyledMapItem>
