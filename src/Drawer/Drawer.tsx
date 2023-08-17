@@ -30,7 +30,7 @@ const Drawer: FC = () => {
       <div className="history">
         <h3>History</h3>
         {selectedProperty?.events.map((event) => (
-          <Event event={event} />
+          <Event key={event.date + event.description} event={event} />
         ))}
       </div>
     </StyledDrawer>
