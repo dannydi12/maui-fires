@@ -7,6 +7,10 @@ export const StyledEvent = styled.div<{}>`
   border-bottom: #e4e4e4 1px solid;
   padding: 10px 10px;
 
+  &:last-child {
+    border-bottom: none;
+  }
+
   .event-wrapper {
     display: flex;
   }
