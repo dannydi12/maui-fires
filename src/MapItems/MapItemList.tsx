@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import { Property } from "../types/Property";
 import MapItem from "./MapItem";
-import { listOfBrokers } from "../utils/buildListOfBrokers";
 
 type Props = {
   properties: Property[];
@@ -9,10 +8,6 @@ type Props = {
 
 const MapItems: FC<Props> = ({ properties }) => {
   const [selected, setSelected] = useState("");
-
-  
-
-  console.log(listOfBrokers(properties));
 
   return (
     <>

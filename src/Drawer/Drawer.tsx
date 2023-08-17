@@ -7,11 +7,15 @@ import { formatPrice } from "../utils/formatPrice";
 
 const Drawer: FC = () => {
   const isOpen = useDrawerStore((state) => state.isOpen);
+  const closeDrawer = useDrawerStore((state) => state.closeDrawer);
   const selectedProperty = useDrawerStore((state) => state.selectedProperty);
 
   return (
     <StyledDrawer $isOpen={isOpen}>
-      <h2>{selectedProperty?.address}</h2>
+      <div className="drawer-header">
+        <h2>{selectedProperty?.address}</h2>
+        <button onClick={closeDrawer}>&#x2715;</button>
+      </div>
       <div className="details-row">
         <div className="status">
           {selectedProperty?.events[0].description}{" "}

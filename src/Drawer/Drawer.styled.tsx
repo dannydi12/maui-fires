@@ -3,10 +3,10 @@ import { styled } from "styled-components";
 export const StyledDrawer = styled.div<{
   $isOpen: boolean;
 }>`
-  right: ${({ $isOpen }) => ($isOpen ? "0" : "100%")};
+  right: ${({ $isOpen }) => ($isOpen ? "0px" : "100vw")};
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 10;
   position: absolute;
@@ -16,10 +16,26 @@ export const StyledDrawer = styled.div<{
   padding: 20px;
   padding-bottom: 0;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   h2 {
-    font-size: 35px;
+    font-size: 25px;
+  }
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button {
+      font-size: 25px;
+      background: none;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   .details-row {
@@ -52,5 +68,9 @@ export const StyledDrawer = styled.div<{
   @media (min-width: 800px) {
     width: 670px;
     right: ${({ $isOpen }) => ($isOpen ? "0px" : "-670px")};
+
+    h2 {
+      font-size: 35px;
+    }
   }
 `;
