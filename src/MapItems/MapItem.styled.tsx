@@ -16,4 +16,10 @@ export const StyledMapItem = styled.div<{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
