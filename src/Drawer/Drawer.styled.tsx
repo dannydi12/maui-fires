@@ -14,6 +14,9 @@ export const StyledDrawer = styled.div<{
   transition: right 0.3s ease-in-out;
 
   padding: 20px;
+  padding-bottom: 0;
+
+  overflow-y: scroll;
 
   h2 {
     font-size: 35px;
