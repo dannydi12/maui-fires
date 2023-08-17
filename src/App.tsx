@@ -2,7 +2,7 @@ import { Property } from "./types/Property";
 import Map from "react-map-gl";
 import { StyledApp } from "./App.styled";
 import { useQuery } from "@tanstack/react-query";
-import MapItems from "./MapItems/MapItems";
+import MapItems from "./MapItems/MapItemList";
 
 function App() {
   const { data } = useQuery<any, unknown, Property[], any>({
@@ -15,6 +15,7 @@ function App() {
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         mapLib={import("mapbox-gl")}
         initialViewState={{
+          // lahaina location
           longitude: -156.64771868530957,
           latitude: 20.913646483159667,
           zoom: 11.5,

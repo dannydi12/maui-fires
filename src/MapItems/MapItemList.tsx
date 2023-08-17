@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Property } from "../types/Property";
-import MapItem from "../MapItem/MapItem";
+import MapItem from "./MapItem";
 import { listOfBrokers } from "../utils/buildListOfBrokers";
 
 type Props = {
