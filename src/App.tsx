@@ -3,6 +3,7 @@ import Map from "react-map-gl";
 import { StyledApp } from "./App.styled";
 import { useQuery } from "@tanstack/react-query";
 import MapItems from "./MapItems/MapItemList";
+import Drawer from "./Drawer/Drawer";
 
 function App() {
   const { data } = useQuery<any, unknown, Property[], any>({
@@ -27,6 +28,7 @@ function App() {
       >
         {!!data && <MapItems properties={data} />}
       </Map>
+      <Drawer />
     </StyledApp>
   );
 }
