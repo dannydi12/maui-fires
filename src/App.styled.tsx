@@ -18,6 +18,16 @@ export const StyledApp = styled.div`
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 4px 5px 0px 3px #ff4e4e;
+
+    transition: color box-shadow background-color 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      color: #ffffff;
+      box-shadow: 4px 5px 0px 3px #ffffff;
+      background-color: #ff4e4e;
+    }
   }
 
   @media (min-width: 800px) {
