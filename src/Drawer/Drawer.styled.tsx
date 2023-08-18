@@ -12,7 +12,7 @@ export const StyledDrawer = styled.div<{
   position: absolute;
   background-color: #fefefe;
   transition: right 0.3s ease-in-out;
-
+  box-shadow: -15px 0px 20px #00000008;
   padding: 20px;
   padding-bottom: 0;
 
