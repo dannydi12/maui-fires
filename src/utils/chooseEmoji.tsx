@@ -5,13 +5,13 @@ export const chooseEmoji = (status: string) => {
     case "Pending":
       return "⏳";
     case "Listed":
-      return "📢";
+      return "🏠";
     case "Listing Removed":
       return "❌";
     case "Price Changed":
       return "📉";
     case "Relisted":
-      return "🧲";
+      return "🔃";
     case "Sold":
       return "💰";
     default:
