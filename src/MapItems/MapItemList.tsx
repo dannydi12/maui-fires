@@ -7,13 +7,14 @@ type Props = {
 };
 
 const MapItems: FC<Props> = ({ properties }) => {
+  const filteredProperties = properties.filter((prop) => {
+    return new Date(prop.events[0].date).valueOf() > new Date("2023-08-08").valueOf();
+  });
+
   return (
     <>
-      {properties.map((property) => (
-        <MapItem
-          key={property.apn + property.address}
-          property={property}
-        />
+      {filteredProperties.map((property) => (
+        <MapItem key={property.apn + property.address} property={property} />
       ))}
     </>
   );
