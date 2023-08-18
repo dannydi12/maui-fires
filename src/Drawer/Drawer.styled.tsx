@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const StyledDrawer = styled.div<{
   $isOpen: boolean;
 }>`
-  right: ${({ $isOpen }) => ($isOpen ? "0px" : "100vw")};
+  right: ${({ $isOpen }) => ($isOpen ? "0px" : "-100vw")};
   top: 0;
   bottom: 0;
   width: 100vw;
