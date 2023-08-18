@@ -13,8 +13,12 @@ export const StyledLegendButton = styled.button`
   font-weight: 600;
   font-size: 14px;
   padding: 5px 10px;
-
+  z-index: 1;
   cursor: pointer;
 
-  z-index: 1;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
