@@ -47,7 +47,6 @@ export const StyledModal = styled.div`
     position: relative;
     cursor: auto;
     
-    /* box-shadow: 5px 3px 0px 3px #ff4e4e; */
     box-shadow: 4px 5px 0px 3px #ff4e4e;
     animation: modal-entry 0.1s ease forwards;
 
