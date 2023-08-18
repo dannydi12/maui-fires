@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { StyledDrawer } from "./Drawer.styled";
 import { useDrawerStore } from "../stores/drawerStore";
 import { chooseEmoji } from "../utils/chooseEmoji";
@@ -9,6 +9,20 @@ const Drawer: FC = () => {
   const isOpen = useDrawerStore((state) => state.isOpen);
   const closeDrawer = useDrawerStore((state) => state.closeDrawer);
   const selectedProperty = useDrawerStore((state) => state.selectedProperty);
+
+  useEffect(() => {
+    const handleEscapeKeyPress = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeDrawer();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscapeKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKeyPress);
+    };
+  }, []);
 
   return (
     <StyledDrawer $isOpen={isOpen}>
