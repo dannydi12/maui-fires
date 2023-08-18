@@ -10,6 +10,7 @@ import LandingModal from "./LandingModal/LandingModal";
 import Footer from "./Footer/Footer";
 import LegendButton from "./LegendButton/LegendButton";
 import LegendModal from "./LegendModal/LegendModal";
+import DonateButton from "./DonateButton/DonateButton";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
@@ -24,7 +25,9 @@ function App() {
 
   return (
     <StyledApp>
-      <h1 onClick={() => setShowModal(true)}>LandGrab Watch</h1>
+      <h1 onClick={() => setShowModal(true)}>LandGrab Watch
+      <DonateButton onClick={() => setShowLegend(true)} />
+      </h1>
       <Map
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         mapLib={import("mapbox-gl")}
