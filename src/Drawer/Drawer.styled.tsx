@@ -8,7 +8,7 @@ export const StyledDrawer = styled.div<{
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 10;
+  z-index: 11;
   position: absolute;
   background-color: #fefefe;
   transition: right 0.3s ease-in-out;
