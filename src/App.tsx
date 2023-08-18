@@ -4,7 +4,6 @@ import { StyledApp } from "./App.styled";
 import { useQuery } from "@tanstack/react-query";
 import MapItems from "./MapItems/MapItemList";
 import Drawer from "./Drawer/Drawer";
-import { AxiosRequestConfig } from "axios";
 import { useState } from "react";
 import LandingModal from "./LandingModal/LandingModal";
 import Footer from "./Footer/Footer";
