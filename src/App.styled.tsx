@@ -5,7 +5,7 @@ export const StyledApp = styled.div`
   height: 100vh;
 
   h1 {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 20px;
     font-weight: 700;
     position: fixed;
@@ -16,16 +16,16 @@ export const StyledApp = styled.div`
     background-color: #ffffffe2;
     padding: 5px 25px;
     border-radius: 5px;
-
-    box-shadow: 4px 5px 0px 3px #ff4e4e;;
+    cursor: pointer;
+    box-shadow: 4px 5px 0px 3px #ff4e4e;
   }
 
   @media (min-width: 800px) {
-   h1 {
-    font-family: 'Inter';
-    font-size: 40px;
-    top: 20px;
-    left: 20px;
-  }
+    h1 {
+      font-family: "Inter";
+      font-size: 40px;
+      top: 20px;
+      left: 20px;
+    }
   }
 `;
