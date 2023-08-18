@@ -30,8 +30,13 @@ function App() {
           latitude: 20.913646483159667,
           zoom: 11.5,
         }}
+        maxBounds={[
+          [-156.9752737894423, 20.672864436517315],
+          [-156.22767799535026, 21.174269005265103],
+        ]}
+        // pitch={65}
         // onClick={(e) => console.log(e)}
-        // onDrag={(e) => console.log(e)}
+        onDrag={(e) => console.log(e)}
         mapStyle="mapbox://styles/mapbox/streets-v9"
       >
         {!!data && <MapItems properties={data} />}
