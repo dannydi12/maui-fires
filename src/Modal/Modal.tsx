@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import { StyledModal } from "./Modal.styled";
+import { createPortal } from "react-dom";
 
 type Props = {
   children: ReactNode;
@@ -8,16 +9,21 @@ type Props = {
 
 const Modal: FC<Props> = ({ children, dismiss }) => {
   return (
-    <StyledModal>
-      <div className="overlay" onClick={dismiss}>
-        <div className="body" onClick={(e) => e.stopPropagation()}>
-          <button onClick={dismiss} className="exit">
-            &#10005;
-          </button>
-          {children}
-        </div>
-      </div>
-    </StyledModal>
+    <>
+      {createPortal(
+        <StyledModal>
+          <div className="overlay" onClick={dismiss}>
+            <div className="body" onClick={(e) => e.stopPropagation()}>
+              <button onClick={dismiss} className="exit">
+                &#10005;
+              </button>
+              {children}
+            </div>
+          </div>
+        </StyledModal>,
+        document.body
+      )}
+    </>
   );
 };
 
