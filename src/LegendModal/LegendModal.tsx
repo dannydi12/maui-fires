@@ -11,6 +11,7 @@ const LegendModal: FC<Props> = ({ dismiss }) => {
   return (
     <Modal dismiss={dismiss}>
       <StyledLegendModal>
+        <h3>Legend</h3>
         <div className="status">
           <p className="emoji">{chooseEmoji("Listed")}</p>
           <p className="label">Listed</p>
