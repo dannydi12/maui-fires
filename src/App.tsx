@@ -8,9 +8,11 @@ import { AxiosRequestConfig } from "axios";
 import { useState } from "react";
 import LandingModal from "./LandingModal/LandingModal";
 import Footer from "./Footer/Footer";
+import LegendButton from "./LegendButton/LegendButton";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
+  const [showLegend, setShowLegend] = useState(false);
 
   const { data } = useQuery<any, unknown, Property[], any>({
     queryKey: [
@@ -44,6 +46,7 @@ function App() {
       </Map>
       <Drawer />
       {showModal && <LandingModal dismiss={() => setShowModal(false)} />}
+      <LegendButton onClick={() => setShowLegend(true)} />
       <Footer />
     </StyledApp>
   );
