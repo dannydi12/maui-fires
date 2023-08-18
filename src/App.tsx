@@ -21,7 +21,8 @@ function App() {
   const { data } = useQuery<any, unknown, Property[], any>({
     queryKey: [
       "get_properties",
-      { params: { start_date: "2023-08-08" } } as AxiosRequestConfig,
+      // turn back on when this filters properties and not events
+      // { params: { start_date: "2023-08-08" } } as AxiosRequestConfig,
     ],
   });
 

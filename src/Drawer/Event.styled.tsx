@@ -1,11 +1,14 @@
 import { styled } from "styled-components";
 
-export const StyledEvent = styled.div<{}>`
+export const StyledEvent = styled.div<{ $isAfterDisaster: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: #e4e4e4 1px solid;
   padding: 10px 10px;
+
+  background-color: ${({ $isAfterDisaster }) =>
+    $isAfterDisaster ? "#ff8b8b30" : "white"};
 
   &:last-child {
     border-bottom: none;

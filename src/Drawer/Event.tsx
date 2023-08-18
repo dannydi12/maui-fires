@@ -9,8 +9,11 @@ type Props = {
 };
 
 const Event: FC<Props> = ({ event }) => {
+  const isAfterDisaster =
+    new Date("2023-08-08").valueOf() < new Date(event.date).valueOf();
+
   return (
-    <StyledEvent>
+    <StyledEvent $isAfterDisaster={isAfterDisaster}>
       <div className="event-wrapper">
         <p className="emoji">{chooseEmoji(event.description)}</p>
         <div className="event-details">
