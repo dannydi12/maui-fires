@@ -42,7 +42,7 @@ export const StyledModal = styled.div`
     max-width: 900px;
     max-height: 90%;
     background-color: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     position: relative;
     cursor: auto;
@@ -50,6 +50,8 @@ export const StyledModal = styled.div`
     /* box-shadow: 5px 3px 0px 3px #ff4e4e; */
     box-shadow: 4px 5px 0px 3px #ff4e4e;
     animation: modal-entry 0.1s ease forwards;
+
+    overflow-x: auto;
   }
 
   .exit {
