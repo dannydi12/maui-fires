@@ -4,10 +4,14 @@ import { StyledApp } from "./App.styled";
 import { useQuery } from "@tanstack/react-query";
 import MapItems from "./MapItems/MapItemList";
 import Drawer from "./Drawer/Drawer";
+import { AxiosRequestConfig } from "axios";
 
 function App() {
   const { data } = useQuery<any, unknown, Property[], any>({
-    queryKey: ["get_properties"],
+    queryKey: [
+      "get_properties",
+      { params: { start_date: "2023-08-08" } } as AxiosRequestConfig,
+    ],
   });
 
   return (
