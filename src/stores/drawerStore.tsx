@@ -11,7 +11,7 @@ type DrawerStore = {
 export const useDrawerStore = create<DrawerStore>((set) => ({
   isOpen: false,
   selectedProperty: null,
-  closeDrawer: () => set(() => ({ isOpen: false })),
+  closeDrawer: () => set(() => ({ isOpen: false, selectedProperty: null })),
   selectProperty: (property: Property) =>
     set(() => ({ isOpen: true, selectedProperty: property })),
 }));

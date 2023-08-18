@@ -7,13 +7,18 @@ import { useDrawerStore } from "../stores/drawerStore";
 import { chooseEmoji } from "../utils/chooseEmoji";
 
 type Props = {
-  selected: boolean;
   property: Property;
-  setSelected: (input: string) => void;
 };
 
-const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
+const MapItem: FC<Props> = ({ property }) => {
   const selectProperty = useDrawerStore((state) => state.selectProperty);
+  const selectedProperty = useDrawerStore((state) => state.selectedProperty);
+
+  const selectedPropertyUniqueId =
+    (selectedProperty?.apn || "") + selectedProperty?.address;
+  const currentPropertyUniqueId = (property?.apn || "") + property?.address;
+
+  const isSelected = selectedPropertyUniqueId === currentPropertyUniqueId;
 
   return (
     <Marker
@@ -21,12 +26,11 @@ const MapItem: FC<Props> = ({ property, setSelected, selected }) => {
       longitude={property.longitude}
       style={{ cursor: "pointer" }}
       onClick={() => {
-        setSelected(property.apn + property.address);
         selectProperty(property);
       }}
     >
       <StyledMapItem
-        selected={selected}
+        selected={isSelected}
         background={stringToPastelColor(property.listing_brokers[0])}
       >
         {chooseEmoji(property.events[0].description)}
