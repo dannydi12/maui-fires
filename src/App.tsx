@@ -7,6 +7,7 @@ import Drawer from "./Drawer/Drawer";
 import { AxiosRequestConfig } from "axios";
 import { useState } from "react";
 import LandingModal from "./LandingModal/LandingModal";
+import Footer from "./Footer/Footer";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
@@ -43,6 +44,7 @@ function App() {
       </Map>
       <Drawer />
       {showModal && <LandingModal dismiss={() => setShowModal(false)} />}
+      <Footer />
     </StyledApp>
   );
 }
