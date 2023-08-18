@@ -9,6 +9,7 @@ import { useState } from "react";
 import LandingModal from "./LandingModal/LandingModal";
 import Footer from "./Footer/Footer";
 import LegendButton from "./LegendButton/LegendButton";
+import LegendModal from "./LegendModal/LegendModal";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
@@ -46,6 +47,7 @@ function App() {
       </Map>
       <Drawer />
       {showModal && <LandingModal dismiss={() => setShowModal(false)} />}
+      {showLegend && <LegendModal dismiss={() => setShowLegend(false)} />}
       <LegendButton onClick={() => setShowLegend(true)} />
       <Footer />
     </StyledApp>

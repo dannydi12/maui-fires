@@ -2,6 +2,8 @@ export const chooseEmoji = (status: string) => {
   switch (status) {
     case "Contingent":
       return "🤝";
+    case "Pending":
+      return "💁‍♂️";
     case "Listed":
       return "📝";
     case "Listing Removed":
