@@ -37,7 +37,7 @@ function App() {
         ]}
         // pitch={65}
         // onClick={(e) => console.log(e)}
-        onDrag={(e) => console.log(e)}
+        // onDrag={(e) => console.log(e)}
         mapStyle="mapbox://styles/mapbox/streets-v9"
       >
         {!!data && <MapItems properties={data} />}
