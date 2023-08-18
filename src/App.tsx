@@ -11,10 +11,12 @@ import Footer from "./Footer/Footer";
 import LegendButton from "./LegendButton/LegendButton";
 import LegendModal from "./LegendModal/LegendModal";
 import DonateButton from "./DonateButton/DonateButton";
+import DonateModal from "./DonateModal/DonateModal";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
   const [showLegend, setShowLegend] = useState(false);
+  const [showDonate, setShowDonate] = useState(false);
 
   const { data } = useQuery<any, unknown, Property[], any>({
     queryKey: [
@@ -26,7 +28,7 @@ function App() {
   return (
     <StyledApp>
       <h1 onClick={() => setShowModal(true)}>LandGrab Watch
-      <DonateButton onClick={() => setShowLegend(true)} />
+      <DonateButton onClick={() => setShowDonate(true)} />
       </h1>
       <Map
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
@@ -50,6 +52,7 @@ function App() {
       </Map>
       <Drawer />
       {showModal && <LandingModal dismiss={() => setShowModal(false)} />}
+      {showDonate && <DonateModal dismiss={() => setShowDonate(false)} />}
       {showLegend && <LegendModal dismiss={() => setShowLegend(false)} />}
       <LegendButton onClick={() => setShowLegend(true)} />
       <Footer />

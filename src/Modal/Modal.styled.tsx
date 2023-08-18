@@ -39,6 +39,7 @@ export const StyledModal = styled.div`
 
   .body {
     max-width: 900px;
+    margin: 15px;
     max-height: 90%;
     background-color: white;
     padding: 15px;
