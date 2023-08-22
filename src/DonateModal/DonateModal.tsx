@@ -28,7 +28,7 @@ const DonateModal: FC<Props> = ({ dismiss }) => {
             <button
               onClick={() =>
                 window.open(
-                  "https://buy.stripe.com/3cscQQa5xcUf7XW3ce",
+                  "https://buy.stripe.com/6oEeVTdxf18kdhK9AA",
                   "_blank"
                 )
               }
