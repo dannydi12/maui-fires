@@ -5,7 +5,7 @@ const Footer: FC = () => {
   return (
     <StyledFooter>
       <p>
-        Created by <a href="https://twitter.com/byroncbriggs" target="_blank">@byroncbriggs</a> & <a href="https://twitter.com/electricrealm" target="_blank">@electricrealm</a>
+        Created by <a href="https://twitter.com/byroncbriggs" target="_blank">@byroncbriggs</a> & <a href="https://twitter.com/dan_thebuilder" target="_blank">@dan_thebuilder</a>
       </p>
     </StyledFooter>
   );
