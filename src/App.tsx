@@ -1,7 +1,5 @@
-import { Property } from "./types/Property";
 import Map from "react-map-gl";
 import { StyledApp } from "./App.styled";
-import { useQuery } from "@tanstack/react-query";
 import MapItems from "./MapItems/MapItemList";
 import Drawer from "./Drawer/Drawer";
 import { useState } from "react";
@@ -11,19 +9,12 @@ import LegendButton from "./LegendButton/LegendButton";
 import LegendModal from "./LegendModal/LegendModal";
 import DonateButton from "./DonateButton/DonateButton";
 import DonateModal from "./DonateModal/DonateModal";
+import data from '../example-response.json'
 
 function App() {
   const [showModal, setShowModal] = useState(true);
   const [showLegend, setShowLegend] = useState(false);
   const [showDonate, setShowDonate] = useState(false);
-
-  const { data } = useQuery<any, unknown, Property[], any>({
-    queryKey: [
-      "get_properties",
-      // turn back on when this filters properties and not events
-      // { params: { start_date: "2023-08-08" } } as AxiosRequestConfig,
-    ],
-  });
 
   return (
     <StyledApp>
